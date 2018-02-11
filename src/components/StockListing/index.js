@@ -18,7 +18,6 @@ const StockListing = () => (
           <Table.HeaderCell />
           <Table.HeaderCell>Symbol</Table.HeaderCell>
           <Table.HeaderCell>Price</Table.HeaderCell>
-          <Table.HeaderCell>Shares</Table.HeaderCell>
           <Table.HeaderCell>Open</Table.HeaderCell>
           <Table.HeaderCell>High</Table.HeaderCell>
           <Table.HeaderCell>Low</Table.HeaderCell>
@@ -33,7 +32,6 @@ const StockListing = () => (
           </Table.Cell>
           <Table.Cell>MSFT</Table.Cell>
           <Table.Cell>$100</Table.Cell>
-          <Table.Cell>1</Table.Cell>
           <Table.Cell>$100</Table.Cell>
           <Table.Cell>$100</Table.Cell>
           <Table.Cell>$100</Table.Cell>
@@ -45,7 +43,6 @@ const StockListing = () => (
           </Table.Cell>
           <Table.Cell>GOOGL</Table.Cell>
           <Table.Cell>$100</Table.Cell>
-          <Table.Cell>1</Table.Cell>
           <Table.Cell>$100</Table.Cell>
           <Table.Cell>$100</Table.Cell>
           <Table.Cell>$100</Table.Cell>
@@ -57,7 +54,6 @@ const StockListing = () => (
           </Table.Cell>
           <Table.Cell>APL</Table.Cell>
           <Table.Cell>$100</Table.Cell>
-          <Table.Cell>1</Table.Cell>
           <Table.Cell>$100</Table.Cell>
           <Table.Cell>$100</Table.Cell>
           <Table.Cell>$100</Table.Cell>
