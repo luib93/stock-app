@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 const LoginForm = () => (
   <div className="login-form">
@@ -45,7 +46,7 @@ const LoginForm = () => (
           </Segment>
         </Form>
         <Message>
-          Need to <a href="#">Sign Up</a>?
+          Need to <Link to="/register">Sign Up</Link>?
         </Message>
       </Grid.Column>
     </Grid>
