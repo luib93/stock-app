@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button, Checkbox, Icon, Table, Container, Header } from 'semantic-ui-react';
+import { Button, Icon, Table, Container, Header } from 'semantic-ui-react';
+import StockItem from '../StockItem';
 
 const StockListing = () => (
   <Container>
@@ -26,39 +27,9 @@ const StockListing = () => (
       </Table.Header>
 
       <Table.Body>
-        <Table.Row>
-          <Table.Cell collapsing>
-            <Checkbox />
-          </Table.Cell>
-          <Table.Cell>MSFT</Table.Cell>
-          <Table.Cell>$100</Table.Cell>
-          <Table.Cell>$100</Table.Cell>
-          <Table.Cell>$100</Table.Cell>
-          <Table.Cell>$100</Table.Cell>
-          <Table.Cell>1.10M</Table.Cell>
-        </Table.Row>
-        <Table.Row>
-          <Table.Cell collapsing>
-            <Checkbox />
-          </Table.Cell>
-          <Table.Cell>GOOGL</Table.Cell>
-          <Table.Cell>$100</Table.Cell>
-          <Table.Cell>$100</Table.Cell>
-          <Table.Cell>$100</Table.Cell>
-          <Table.Cell>$100</Table.Cell>
-          <Table.Cell>1.10M</Table.Cell>
-        </Table.Row>
-        <Table.Row>
-          <Table.Cell collapsing>
-            <Checkbox />
-          </Table.Cell>
-          <Table.Cell>APL</Table.Cell>
-          <Table.Cell>$100</Table.Cell>
-          <Table.Cell>$100</Table.Cell>
-          <Table.Cell>$100</Table.Cell>
-          <Table.Cell>$100</Table.Cell>
-          <Table.Cell>1.10M</Table.Cell>
-        </Table.Row>
+        <StockItem symbol="MSFT" price="$100" open="$100" low="$100" high="$100" volume="1.10M" />
+        <StockItem symbol="GOOGL" price="$100" open="$100" low="$100" high="$100" volume="1.10M" />
+        <StockItem symbol="AAPL" price="$100" open="$100" low="$100" high="$100" volume="1.10M" />
       </Table.Body>
 
       <Table.Footer fullWidth>

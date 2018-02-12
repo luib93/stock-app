@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Menu } from 'semantic-ui-react';
+import { Container, Menu, Input } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
 const Header = () => (
@@ -17,7 +17,12 @@ const Header = () => (
       <Menu.Item as={Link} to="/bonds" header>
         Bonds
       </Menu.Item>
-      <Menu.Item as={Link} position="right" to="/login">My Account</Menu.Item>
+      <Menu.Menu position="right">
+        <Menu.Item>
+          <Input icon="search" placeholder="Search..." />
+        </Menu.Item>
+        <Menu.Item as={Link} position="right" to="/login">My Account</Menu.Item>
+      </Menu.Menu>
     </Container>
   </Menu>
 );
