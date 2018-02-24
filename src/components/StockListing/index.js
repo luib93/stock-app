@@ -1,6 +1,7 @@
 import React from 'react';
-import { Button, Icon, Table, Container, Header } from 'semantic-ui-react';
-import StockItem from '../StockItem';
+import { Icon, Table, Container, Header } from 'semantic-ui-react';
+import StockItem from '../../containers/StockItemContainer';
+import StockListingControls from '../../containers/StockListingControlsContainer';
 
 const StockListing = () => (
   <Container>
@@ -25,22 +26,15 @@ const StockListing = () => (
           <Table.HeaderCell>Volume</Table.HeaderCell>
         </Table.Row>
       </Table.Header>
-
       <Table.Body>
-        <StockItem symbol="MSFT" price="$100" open="$100" low="$100" high="$100" volume="1.10M" />
-        <StockItem symbol="GOOGL" price="$100" open="$100" low="$100" high="$100" volume="1.10M" />
-        <StockItem symbol="AAPL" price="$100" open="$100" low="$100" high="$100" volume="1.10M" />
+        <StockItem />
       </Table.Body>
 
       <Table.Footer fullWidth>
         <Table.Row>
           <Table.HeaderCell />
           <Table.HeaderCell colSpan="7">
-            <Button floated="right" icon labelPosition="left" primary size="small">
-              <Icon name="bar chart" /> Add Symbol
-            </Button>
-            <Button size="small">Remove</Button>
-            <Button disabled size="small">Remove All</Button>
+            <StockListingControls />
           </Table.HeaderCell>
         </Table.Row>
       </Table.Footer>

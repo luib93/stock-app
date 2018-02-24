@@ -20,11 +20,11 @@ const StockItem = ({
 
 StockItem.propTypes = {
   symbol: PropType.string,
-  price: PropType.string,
-  open: PropType.string,
-  high: PropType.string,
-  low: PropType.string,
-  volume: PropType.string,
+  price: PropType.number,
+  open: PropType.number,
+  high: PropType.number,
+  low: PropType.number,
+  volume: PropType.number,
 };
 
 StockItem.defaultProps = {

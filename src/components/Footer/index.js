@@ -7,7 +7,7 @@ const Footer = () => (
     vertical
     fixed="bottom"
     style={{
- margin: '5em 0em 0em', padding: '5em 0em', position: 'fixed', bottom: '0', width: '100%', backgroundColor: '#006400',
+ margin: '5em 0em 0em', padding: '5em 0em', width: '100%', backgroundColor: '#006400',
 }}
   >
     <Container textAlign="center">
