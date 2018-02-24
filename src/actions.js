@@ -16,3 +16,12 @@ export const getStockSuccess = (symbol, data) => ({
   symbol,
   data,
 });
+
+export const removeStock = symbol => ({
+  type: Constants.REMOVE_STOCK,
+  symbol,
+});
+
+export const removeAllStocks = () => ({
+  type: Constants.REMOVE_ALL_STOCKS,
+});

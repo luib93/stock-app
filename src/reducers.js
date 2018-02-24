@@ -23,6 +23,13 @@ const stockData = (state = initialStockDataState, action) => {
   switch (action.type) {
     case Constants.GET_STOCK_DATA_SUCCESS:
       return { ...state, [action.symbol]: action.data };
+    case Constants.REMOVE_STOCK: {
+      const newState = { ...state };
+      delete newState[action.symbol];
+      return newState;
+    }
+    case Constants.REMOVE_ALL_STOCKS:
+      return initialStockDataState;
     default:
       return state;
   }
