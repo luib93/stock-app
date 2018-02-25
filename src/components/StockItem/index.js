@@ -15,10 +15,10 @@ const StockItem = ({
         <Checkbox onChange={handleChange} disabled={!onToggle} />
       </Table.Cell>
       <Table.Cell>{symbol}</Table.Cell>
-      <Table.Cell>{price}</Table.Cell>
-      <Table.Cell>{open}</Table.Cell>
-      <Table.Cell>{high}</Table.Cell>
-      <Table.Cell>{low}</Table.Cell>
+      <Table.Cell>{price ? `$${price}` : ''}</Table.Cell>
+      <Table.Cell>{open ? `$${open}` : ''}</Table.Cell>
+      <Table.Cell>{high ? `$${high}` : ''}</Table.Cell>
+      <Table.Cell>{low ? `$${low}` : ''}</Table.Cell>
       <Table.Cell>{volume}</Table.Cell>
     </Table.Row>
   );
