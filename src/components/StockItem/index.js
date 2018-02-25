@@ -3,20 +3,26 @@ import PropType from 'prop-types';
 import { Checkbox, Table } from 'semantic-ui-react';
 
 const StockItem = ({
-  symbol, price, open, high, low, volume,
-}) => (
-  <Table.Row>
-    <Table.Cell collapsing>
-      <Checkbox />
-    </Table.Cell>
-    <Table.Cell>{symbol}</Table.Cell>
-    <Table.Cell>{price}</Table.Cell>
-    <Table.Cell>{open}</Table.Cell>
-    <Table.Cell>{high}</Table.Cell>
-    <Table.Cell>{low}</Table.Cell>
-    <Table.Cell>{volume}</Table.Cell>
-  </Table.Row>
-);
+  symbol, price, open, high, low, volume, onToggle,
+}) => {
+  const handleChange = () => {
+    onToggle(symbol);
+  };
+
+  return (
+    <Table.Row>
+      <Table.Cell collapsing>
+        <Checkbox onChange={handleChange} disabled={!onToggle} />
+      </Table.Cell>
+      <Table.Cell>{symbol}</Table.Cell>
+      <Table.Cell>{price}</Table.Cell>
+      <Table.Cell>{open}</Table.Cell>
+      <Table.Cell>{high}</Table.Cell>
+      <Table.Cell>{low}</Table.Cell>
+      <Table.Cell>{volume}</Table.Cell>
+    </Table.Row>
+  );
+};
 
 StockItem.propTypes = {
   symbol: PropType.string,
@@ -25,6 +31,7 @@ StockItem.propTypes = {
   high: PropType.number,
   low: PropType.number,
   volume: PropType.number,
+  onToggle: PropType.func,
 };
 
 StockItem.defaultProps = {
@@ -34,6 +41,7 @@ StockItem.defaultProps = {
   high: '',
   low: '',
   volume: '',
+  onToggle: undefined,
 };
 
 export default StockItem;

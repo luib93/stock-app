@@ -8,7 +8,7 @@ function* getStockData({ symbol }) {
     const stockQuote = yield call(API.getStockQuote, symbol);
     console.log(JSON.stringify(stockQuote));
 
-    yield put(Actions.getStockSuccess(symbol, stockQuote.data));
+    yield put(Actions.getStockSuccess(stockQuote.data.symbol, stockQuote.data));
   } catch (e) {
     yield put(Actions.getStockFailure());
   }

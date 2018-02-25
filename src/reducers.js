@@ -23,9 +23,18 @@ const stockData = (state = initialStockDataState, action) => {
   switch (action.type) {
     case Constants.GET_STOCK_DATA_SUCCESS:
       return { ...state, [action.symbol]: action.data };
-    case Constants.REMOVE_STOCK: {
-      const newState = { ...state };
-      delete newState[action.symbol];
+    case Constants.TOGGLE_STOCK: {
+      const data = { ...state[action.symbol] };
+      data.toggled = !data.toggled;
+      return { ...state, [action.symbol]: data };
+    }
+    case Constants.REMOVE_TOGGLED_STOCKS: {
+      const newState = {};
+      Object.keys(state).forEach((key) => {
+        if (!state[key].toggled) {
+          newState[key] = { ...state[key] };
+        }
+      });
       return newState;
     }
     case Constants.REMOVE_ALL_STOCKS:

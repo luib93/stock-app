@@ -35,7 +35,7 @@ class StockListingControls extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <Input value={this.state.input} onChange={this.handleInputChange} style={{ float: 'right' }} action="Add" placeholder="Symbol" />
-        <Button type="button" disabled onClick={this.props.onRemove} size="small">Remove</Button>
+        <Button type="button" onClick={this.props.onRemove} size="small">Remove</Button>
         <Button type="button" onClick={this.props.onRemoveAll} size="small">Remove All</Button>
       </form>
     );
