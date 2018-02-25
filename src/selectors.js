@@ -17,3 +17,8 @@ export const makeSelectStockDataAsListSelector = () => createSelector(
   stockDataSelector,
   global => Object.values(global),
 );
+
+export const makeSelectToggledStockDataAsListSelector = () => createSelector(
+  makeSelectStockDataAsListSelector(),
+  global => global.filter(stock => stock.toggled),
+);

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createStructuredSelector } from 'reselect';
-import { Table, Checkbox } from 'semantic-ui-react';
 import StockItem from '../../components/StockItem';
 import { makeSelectStockDataAsListSelector } from '../../selectors';
 import { toggleStock } from '../../actions';

@@ -35,8 +35,8 @@ class StockListingControls extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <Input value={this.state.input} onChange={this.handleInputChange} style={{ float: 'right' }} action="Add" placeholder="Symbol" />
-        <Button type="button" onClick={this.props.onRemove} size="small">Remove</Button>
-        <Button type="button" onClick={this.props.onRemoveAll} size="small">Remove All</Button>
+        <Button type="button" disabled={this.props.numToggledItems === 0} onClick={this.props.onRemove} size="small">Remove</Button>
+        <Button type="button" disabled={this.props.numAllItems === 0} onClick={this.props.onRemoveAll} size="small">Remove All</Button>
       </form>
     );
   }
@@ -46,6 +46,8 @@ StockListingControls.propTypes = {
   onRemove: PropTypes.func.isRequired,
   onRemoveAll: PropTypes.func.isRequired,
   onAdd: PropTypes.func.isRequired,
+  numToggledItems: PropTypes.number.isRequired,
+  numAllItems: PropTypes.number.isRequired,
 };
 
 export default StockListingControls;
